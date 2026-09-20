@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run Project",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/main",
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "Build Project",
+            "stopAtEntry": false,
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb"
+        }
+    ]
+}
