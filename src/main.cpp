@@ -104,27 +104,52 @@ void player_move()
         {
             map[player_y][player_x] = ' ';
             player_y -= 1;
+
+            if(map[player_y][player_x] == '#')
+            {
+                std::cout << "Error 001";
+                player_y += 1;
+            }
         }
         else if(new_cordinate == 's')
         {
             map[player_y][player_x] = ' ';
             player_y += 1;
+
+            if(map[player_y][player_x] == '#')
+            {
+                std::cout << "Error 001";
+                player_y -= 1;
+            }
         }
         else if(new_cordinate == 'a')
         {
             map[player_y][player_x] = ' ';
             player_x -= 1;
+
+            if(map[player_y][player_x] == '#')
+            {
+                std::cout << "Error 001";
+                player_x += 1;
+            }
         }
         else if(new_cordinate == 'd')
         {
             map[player_y][player_x] = ' ';
             player_x += 1;
+
+            if(map[player_y][player_x] == '#')
+            {
+                std::cout << "Error 001";
+                player_x -= 1;
+            }
         }
         else if(new_cordinate == 'q')
         {
             quit_menu_helper = 0;
             continue;
         }
+        
 
         if(player_x == food_x && player_y == food_y)
         {
