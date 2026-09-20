@@ -1,8 +1,6 @@
 #include <iostream>
-#include <cstdlib>
-#include <unistd.h>
-#include <map.h>
 
+#include "map.h"
 #include "game.h"
 #include "getch.h"
 
