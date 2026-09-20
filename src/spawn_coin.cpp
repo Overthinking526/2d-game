@@ -1,4 +1,5 @@
 #include <cstdlib>
+
 #include "game.h"
 
 void spawn_coin()
