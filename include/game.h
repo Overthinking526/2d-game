@@ -22,3 +22,4 @@ void show_menu();
 void clear_map();
 void show_map();
 void show_player();
+void show_inventory();

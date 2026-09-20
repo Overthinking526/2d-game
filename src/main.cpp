@@ -14,6 +14,8 @@ int coin_y;
 
 int check = 0;
 
+// Точька входа
+
 int main()
 {
     clear_map();

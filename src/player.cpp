@@ -5,6 +5,8 @@
 #include "game.h"
 #include "getch.h"
 
+// Функция хотьбы игрока
+
 void player_move()
 {
     spawn_coin();
@@ -94,6 +96,8 @@ void player_move()
         usleep(150000);
     }
 }
+
+// Функция которая рисует игрока на карте
 
 void show_player()
 {
