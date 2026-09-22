@@ -13,6 +13,13 @@ extern int cheest_2;
 extern int cheest_3;
 extern int cheest_4;
 
+extern int cheest_1_check;
+extern int cheest_2_check;
+extern int cheest_3_check;
+extern int cheest_4_check;
+
+extern int item_id;
+
 extern int coin_x;
 extern int coin_y;
 

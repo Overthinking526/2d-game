@@ -4,6 +4,70 @@
 
 #include "game.h"
 #include "getch.h"
+#include "items.h"
+
+// Функция поднятия предмета
+
+void pick_up_an_object()
+{
+    if(map[player_y][player_x] == '*')
+    {
+        if(cheest_1 == 0 || cheest_1_check == ROCK)
+        {
+            cheest_1++;
+            cheest_1_check = ROCK;
+            map[player_y][player_x] = ' ';
+        }
+        else if (cheest_2 == 0 || cheest_2_check == ROCK)
+        {
+            cheest_2++;
+            cheest_2_check = ROCK;
+            map[player_y][player_x] = ' ';
+        }
+        else if (cheest_3 == 0 || cheest_3_check == ROCK)
+        {
+            cheest_3++;
+            cheest_3_check = ROCK;
+            map[player_y][player_x] = ' ';
+        }
+        else if (cheest_4 == 0 || cheest_4_check == ROCK)
+        {
+            cheest_4++;
+            cheest_4_check = ROCK;
+            map[player_y][player_x] = ' ';
+        }
+        std::cout << "+ 1 Rock";
+    }
+    else if (map[player_y][player_x] == '&')
+    {
+        if(cheest_1 == 0 || cheest_1_check == WOOD)
+        {
+            cheest_1++;
+            cheest_1_check = WOOD;
+            map[player_y][player_x] = ' ';
+        }
+        else if (cheest_2 == 0 || cheest_2_check == WOOD)
+        {
+            cheest_2++;
+            cheest_2_check = WOOD;
+            map[player_y][player_x] = ' ';
+        }
+        else if (cheest_3 == 0 || cheest_3_check == WOOD)
+        {
+            cheest_3++;
+            cheest_3_check = WOOD;
+            map[player_y][player_x] = ' ';
+        }
+        else if (cheest_4 == 0 || cheest_4_check == WOOD)
+        {
+            cheest_4++;
+            cheest_4_check = WOOD;
+            map[player_y][player_x] = ' ';
+        }
+        std::cout << "+ 1 Wood";
+    }
+    
+}
 
 // Функция хотьбы игрока
 
@@ -35,6 +99,17 @@ void player_move()
                 std::cout << "Error 001";
                 player_y += 1;
             }
+            else if (map[player_y][player_x] == '*')
+            {
+                pick_up_an_object();
+                player_y += 1;
+            }
+            else if (map[player_y][player_x] == '&')
+            {
+                pick_up_an_object();
+                player_y += 1;
+            }
+            
         }
         else if(new_cordinate == 's')
         {
@@ -44,6 +119,16 @@ void player_move()
             if(map[player_y][player_x] == '#')
             {
                 std::cout << "Error 001";
+                player_y -= 1;
+            }
+            else if (map[player_y][player_x] == '*')
+            {
+                pick_up_an_object();
+                player_y -= 1;
+            }
+            else if (map[player_y][player_x] == '&')
+            {
+                pick_up_an_object();
                 player_y -= 1;
             }
         }
@@ -57,6 +142,16 @@ void player_move()
                 std::cout << "Error 001";
                 player_x += 1;
             }
+            else if (map[player_y][player_x] == '*')
+            {
+                pick_up_an_object();
+                player_x += 1;
+            }
+            else if (map[player_y][player_x] == '&')
+            {
+                pick_up_an_object();
+                player_x += 1;
+            }
         }
         else if(new_cordinate == 'd')
         {
@@ -66,6 +161,16 @@ void player_move()
             if(map[player_y][player_x] == '#')
             {
                 std::cout << "Error 001";
+                player_x -= 1;
+            }
+            else if (map[player_y][player_x] == '*')
+            {
+                pick_up_an_object();
+                player_x -= 1;
+            }
+            else if (map[player_y][player_x] == '&')
+            {
+                pick_up_an_object();
                 player_x -= 1;
             }
         }

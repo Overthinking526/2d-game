@@ -15,6 +15,13 @@ int cheest_2 = 0;
 int cheest_3 = 0;
 int cheest_4 = 0;
 
+int cheest_1_check = 0;
+int cheest_2_check = 0;
+int cheest_3_check = 0;
+int cheest_4_check = 0;
+
+int item_id = 0;
+
 int coin_x;
 int coin_y;
 
