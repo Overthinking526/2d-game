@@ -1,13 +1,19 @@
 #include <iostream>
+#include <string>
 
-#include "map.h"
 #include "game.h"
 #include "getch.h"
 
 int player_x = 10;
 int player_y = 10;
 
-int snake_length = 1;
+int player_hp = 100;
+int player_damage = 5;
+
+int cheest_1 = 0;
+int cheest_2 = 0;
+int cheest_3 = 0;
+int cheest_4 = 0;
 
 int coin_x;
 int coin_y;

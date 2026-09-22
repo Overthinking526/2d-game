@@ -1,9 +1,17 @@
+#include <string>
+
 #pragma once
 
 extern int player_x;
 extern int player_y;
 
-extern int snake_length;
+extern int player_hp;
+extern int player_damage;
+
+extern int cheest_1;
+extern int cheest_2;
+extern int cheest_3;
+extern int cheest_4;
 
 extern int coin_x;
 extern int coin_y;
@@ -23,3 +31,4 @@ void clear_map();
 void show_map();
 void show_player();
 void show_inventory();
+void show_press_button();

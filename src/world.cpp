@@ -1,6 +1,7 @@
 #include <iostream>
 
 #include "game.h"
+#include "menu.h"
 
 // Карта мира
 
@@ -48,7 +49,12 @@ void show_map()
             std::cout << map[y][x];
         }
 
-        std::cout << "\n";
+        if(y >= 5 && y <= 12)
+        {
+            show_press_button(y - 5);
+        }
+
+        std::cout << '\n';
     }
 
     show_inventory();

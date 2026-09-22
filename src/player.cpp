@@ -85,7 +85,6 @@ void player_move()
             map[player_y][player_x] = ' ';
             usleep(1000);
             check += 1;
-            snake_length += 1;
             spawn_coin();
 
         }
