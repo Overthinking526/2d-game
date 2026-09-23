@@ -18,6 +18,8 @@ void show_menu()
     std::cout << "                                                  " << '\n';
 }
 
+// Функция отрисовки инвенатря
+
 void show_inventory()
 {
     std::cout  << "                 " << "          inventory" << '\n';
@@ -31,12 +33,14 @@ void show_inventory()
     std::cout  << "                 " << "============================" << '\n';
 }
 
+// Функция отрисовки меню подсказки
+
 void show_press_button(int line)
 {
     switch(line)
     {
         case 0:
-            std::cout << "              =========================";
+            std::cout << "              =========control=========";
             break;
         case 1:
             std::cout << "              |  q = exit game        |";
@@ -57,6 +61,24 @@ void show_press_button(int line)
             std::cout << "              |  e = bomb             |";
             break;
         case 7:
+            std::cout << "              =========================";
+            break;   
+        case 8:
+            std::cout << "                                       ";
+            break;
+        case 9:
+            std::cout << "              ==========items==========";
+            break;
+        case 10:
+            std::cout << "              |  * = Rock             |";
+            break;
+        case 11:
+            std::cout << "              |  & = Coal             |";
+            break;
+        case 12:
+            std::cout << "              |  $ = Diamond          |";
+            break;
+        case 13:
             std::cout << "              =========================";
             break;
     }

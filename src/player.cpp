@@ -8,6 +8,7 @@
 
 char new_cordinate;
 char old_press = 'r';
+
 // Функция поднятия предмета
 
 void pick_up_an_object()
@@ -117,7 +118,7 @@ void pick_up_an_object()
     }
 }
 
-// Функция хотьбы игрока
+// Функция хотьбы игрока и обработка карты
 
 void player_move()
 {

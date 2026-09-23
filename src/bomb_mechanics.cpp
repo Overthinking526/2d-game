@@ -2,11 +2,15 @@
 
 #include "game.h"
 
+//обработка кординат бомбы
+
 void momb_cordinate()
 {
     time_x_cordinate = player_x;
     time_y_cordinate = player_y;
 }
+
+//обработка взрыва бомбы
 
 void bomb_boom()
 {
@@ -162,6 +166,8 @@ void bomb_boom()
        map[time_y_cordinate + 2][time_x_cordinate + 1] != '#')
         map[time_y_cordinate + 2][time_x_cordinate + 1] = ' ';
 }
+
+//фукнция бомбы
 
 void momb_func()
 {

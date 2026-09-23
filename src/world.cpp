@@ -94,7 +94,14 @@ void show_map()
             std::cout << map[y][x];
         }
 
+        // Управление
         if(y >= 5 && y <= 12)
+        {
+            show_press_button(y - 5);
+        }
+
+        // Предметы
+        if(y >= 14 && y <= 18)
         {
             show_press_button(y - 5);
         }
