@@ -6,11 +6,12 @@
 #include "getch.h"
 #include "items.h"
 
+char new_cordinate;
+char old_press = 'r';
 // Функция поднятия предмета
 
 void pick_up_an_object()
 {
-
     //------------------------------------------------ROCK
 
     if(map[player_y][player_x] == '*')
@@ -121,17 +122,13 @@ void pick_up_an_object()
 void player_move()
 {
     spawn_coin();
-
-    char new_cordinate;
-
-    char old_press = 'd';
+    generate_map();
 
     int quit_menu_helper = 1;
 
     while(quit_menu_helper)
     {
         system("clear");
-        clear_map();
         map[coin_y][coin_x] = 'X';
 
         new_cordinate = _getch();
@@ -163,7 +160,13 @@ void player_move()
                 pick_up_an_object();
                 player_y += 1;
             }
-            
+            else if (map[player_y][player_x] == 'e')
+            {
+                std::cout << "Error 002";
+                player_y += 1;
+            }
+
+            old_press = new_cordinate;            
         }
 
         //------------------------------------------------S
@@ -193,6 +196,13 @@ void player_move()
                 pick_up_an_object();
                 player_y -= 1;
             }
+            else if (map[player_y][player_x] == 'e')
+            {
+                std::cout << "Error 002";
+                player_y -= 1;
+            }
+
+            old_press = new_cordinate; 
         }
 
         //------------------------------------------------A
@@ -222,6 +232,13 @@ void player_move()
                 pick_up_an_object();
                 player_x += 1;
             }
+            else if (map[player_y][player_x] == 'e')
+            {
+                std::cout << "Error 002";
+                player_x += 1;
+            }
+
+            old_press = new_cordinate; 
         }
 
         //------------------------------------------------D
@@ -251,6 +268,13 @@ void player_move()
                 pick_up_an_object();
                 player_x -= 1;
             }
+            else if (map[player_y][player_x] == 'e')
+            {
+                std::cout << "Error 002";
+                player_x -= 1;
+            }
+
+            old_press = new_cordinate; 
         }
 
         //------------------------------------------------Q
@@ -260,7 +284,11 @@ void player_move()
             quit_menu_helper = 0;
             continue;
         }
-        
+
+        else if(new_cordinate == 'e')
+        {
+            momb_func();
+        }
 
         if(player_x == coin_x && player_y == coin_y)
         {
@@ -285,6 +313,6 @@ void player_move()
 // Функция которая рисует игрока на карте
 
 void show_player()
-{
+{   
     map[player_y][player_x] = 'O';
 }

@@ -30,7 +30,15 @@ extern int coin_y;
 
 extern int check;
 
-extern char map[20][20];
+extern int time_x_cordinate;
+extern int time_y_cordinate;
+
+extern char new_cordinate;
+extern char old_press;
+
+extern char map[30][40];
+extern const int MAP_WIDTH;
+extern const int MAP_HEIGHT;
 
 void spawn_coin();
 void show_menu();
@@ -44,3 +52,6 @@ void show_map();
 void show_player();
 void show_inventory();
 void show_press_button();
+void momb_func();
+void generate_map();
+void spawn_player();

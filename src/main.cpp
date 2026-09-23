@@ -4,8 +4,8 @@
 #include "game.h"
 #include "getch.h"
 
-int player_x = 10;
-int player_y = 10;
+int player_x = MAP_WIDTH / 2;
+int player_y = MAP_HEIGHT / 2;
 
 int player_hp = 100;
 int player_damage = 5;
@@ -31,6 +31,9 @@ int coin_x;
 int coin_y;
 
 int check = 0;
+
+int time_x_cordinate = 0;
+int time_y_cordinate = 0;
 
 // Точька входа
 
