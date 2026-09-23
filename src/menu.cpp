@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 #include "game.h"
 #include "menu.h"
@@ -18,14 +19,15 @@ void show_menu()
 
 void show_inventory()
 {
-    std::cout << "                inventory" << '\n';
-    std::cout << "=========================================" << '\n';
-    std::cout << "     "<< cheest_1 <<"    "<< " " <<"    "<< cheest_2 <<"    "<< " " <<"    "<< cheest_3 <<"    "<< " " <<"    "<< cheest_4 <<"    " << '\n';
-    std::cout << "|         "<< "|" <<"         "<< "|" <<"         "<< "|" <<"         |" << '\n';
-    std::cout << "|         "<< "|" <<"         "<< "|" <<"         "<< "|" <<"         |" << '\n';
-    std::cout << "|         "<< "|" <<"         "<< "|" <<"         "<< "|" <<"         |" << '\n';
-    std::cout << "|         "<< "|" <<"         "<< "|" <<"         "<< "|" <<"         |" << '\n';
-    std::cout << "=========================================" << '\n';
+    std::cout  << "      " << "          inventory" << '\n';
+    std::cout  << "      " << "============================" << '\n';
+
+    std::cout  << "      " << cheest_1_string << "          " << cheest_1 << '\n';
+    std::cout  << "      " << cheest_2_string << "          " << cheest_2 << '\n';
+    std::cout  << "      " << cheest_3_string << "          " << cheest_3 << '\n';
+    std::cout  << "      " << cheest_4_string << "          " << cheest_4 << '\n';
+
+    std::cout  << "      " << "============================" << '\n';
 }
 
 void show_press_button(int line)

@@ -5,8 +5,8 @@ enum ItemID
 {
     EMPTY = 0,
     ROCK = 1,
-    WOOD = 2,
-    DIRT = 3
+    COAL = 2,
+    DIAMOND = 3
 };
 
 #endif

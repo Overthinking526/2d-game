@@ -15,6 +15,11 @@ int cheest_2 = 0;
 int cheest_3 = 0;
 int cheest_4 = 0;
 
+std::string cheest_1_string = "";
+std::string cheest_2_string = "";
+std::string cheest_3_string = "";
+std::string cheest_4_string = "";
+
 int cheest_1_check = 0;
 int cheest_2_check = 0;
 int cheest_3_check = 0;

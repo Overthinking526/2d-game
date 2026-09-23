@@ -13,6 +13,11 @@ extern int cheest_2;
 extern int cheest_3;
 extern int cheest_4;
 
+extern std::string cheest_1_string;
+extern std::string cheest_2_string;
+extern std::string cheest_3_string;
+extern std::string cheest_4_string;
+
 extern int cheest_1_check;
 extern int cheest_2_check;
 extern int cheest_3_check;
